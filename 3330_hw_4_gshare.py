@@ -1,19 +1,14 @@
-# The only collision is 000, and both of those branches are
-# not taken. Therefore, this should be able to achieve
-# perfect prediction at steady state.
-# Expected BHT: [0, 0, 3, 0, 3, 3, 3, 0]
-# Expected accuracy: 99.9%
+
 instructions = [
-    # LSB ^ GLOBAL_HIST = BHT index
-    [0x6, True], # 110 ^ 011 = 101
-    [0xf, False], # 111 ^ 111 = 111
-    [0x9, False], # 001 ^ 110 = 000
-    [0xf, False], # 111 ^ 100 = 011
-    [0x9, False], # 001 ^ 000 = 001
-    [0x6, True], # 110 ^ 000 = 110
-    [0x9, False], # 001 ^ 001 = 000
-    [0x6, True], # 110 ^ 010 = 100
-    [0xf, True] # 111 ^ 101 = 010
+    [0x6, True],
+    [0xf, False],
+    [0x9, False],
+    [0xf, False],
+    [0x9, False],
+    [0x6, True],
+    [0x9, False],
+    [0x6, True], 
+    [0xf, True] 
 ]
 
 GLOBAL_HIST = 0

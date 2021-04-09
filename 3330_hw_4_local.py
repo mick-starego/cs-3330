@@ -1,21 +1,14 @@
-# PHT index 0 should never change.
-# At steady state:
-# 0x6 -> always true
-# 0xf -> FFT
-# 0x9 -> always false
-# Expected PHT: [00, 00, 11, (00 or 01 or 10)]
-# Expected BHT: [(00 or 01), 00, 00, 11]
-# Expected accuracy: ~88.9%
+
 instructions = [
-    [0x6, True], # 10
-    [0xf, False], # 11
-    [0x9, False], # 01
-    [0xf, False], # 11
-    [0x9, False], # 01
-    [0x6, True], # 10
-    [0x9, False], # 01
-    [0x6, True], # 10
-    [0xf, True] # 11 At steady state, this will always be predicted false
+    [0x6, True],
+    [0xf, False],
+    [0x9, False],
+    [0xf, False],
+    [0x9, False],
+    [0x6, True], 
+    [0x9, False],
+    [0x6, True], 
+    [0xf, True] # At steady state, this will always be predicted false
 ]
 
 PHT = [0 for i in range(4)]
