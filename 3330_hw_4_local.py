@@ -18,8 +18,8 @@ instructions = [
     [0xf, True] # 11 At steady state, this will always be predicted false
 ]
 
-PHT = [0b00, 0b00, 0b00, 0b00]
-BHT = [0b00, 0b00, 0b00, 0b00]
+PHT = [0 for i in range(4)]
+BHT = [0 for i in range(4)]
 
 def get_prediction(i):
     return BHT[PHT[i]], PHT[i]

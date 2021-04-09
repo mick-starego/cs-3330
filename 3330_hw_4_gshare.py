@@ -16,8 +16,8 @@ instructions = [
     [0xf, True] # 111 ^ 101 = 010
 ]
 
-GLOBAL_HIST = 0b000
-BHT = [0b00, 0b00, 0b00, 0b00, 0b00, 0b00, 0b00, 0b00]
+GLOBAL_HIST = 0
+BHT = [0 for i in range(8)]
 
 def get_prediction(i):
     BHT_i = i ^ GLOBAL_HIST
