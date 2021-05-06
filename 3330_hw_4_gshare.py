@@ -20,9 +20,9 @@ def get_prediction(i):
 
 def update_hist(result):
     global GLOBAL_HIST
-    GLOBAL_HIST = (GLOBAL_HIST * 2) % 8
+    GLOBAL_HIST = GLOBAL_HIST // 2
     if result:
-        GLOBAL_HIST += 1
+        GLOBAL_HIST += 4
 
 def update_branch(i, result):
     if BHT[i] != 3 and result:
